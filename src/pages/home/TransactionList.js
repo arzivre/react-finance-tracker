@@ -3,8 +3,7 @@ import styles from './Home.module.css'
 
 export default function TransactionList({ documents }) {
   const { transactions, name, amount } = styles
-  const { deleteDocument, response } = useFirestore('transactions')
-  console.log(response)
+  const { deleteDocument } = useFirestore('transactions')
   return (
     <ul className={transactions}>
       {documents.map((data) => (
