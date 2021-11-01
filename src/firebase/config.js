@@ -11,7 +11,11 @@ if (!firebase.apps.length) {
   })
 }
 
+// init services
 const db = firebase.firestore()
 const auth = firebase.auth()
 
-export { db, auth }
+// timestamp
+const timestamp = firebase.firestore.Timestamp
+
+export { db, auth, timestamp }
